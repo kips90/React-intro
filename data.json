@@ -1,0 +1,91 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "description": "JSON Server Node.js CI. Get a full fake REST API with zero coding in less than 30 seconds (seriously). Created ",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "Lipsum generator",
+      "description": "Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.",
+      "author": "kelvin"
+    },
+    {
+      "id": 3,
+      "title": "Moringa:",
+      "description": "Moringa is a plant native to India and other countries. It contains proteins, vitamins,",
+      "author": "typicode"
+    },
+    {
+      "id": 4,
+      "title": "JSON",
+      "description": "A common use of JSON is to exchange data to/from a web server.",
+      "author": "mike"
+    },
+    {
+      "id": 5
+    },
+    {
+      "author": "Kelvin",
+      "description": "TMYJNFHTDGRFVS",
+      "title": "SDFT03",
+      "id": 6
+    },
+    {
+      "author": "Mike",
+      "description": "erfgef",
+      "title": "dfgedfv",
+      "id": 7
+    },
+    {
+      "author": "rtfetfr",
+      "description": "4wwwwwwwwfrw",
+      "title": "we4grf",
+      "id": 8
+    },
+    {
+      "author": "ergfew",
+      "description": "drtgeer",
+      "title": "rgttg",
+      "id": 9
+    },
+    {
+      "author": "kk",
+      "description": "testing react",
+      "title": "Test",
+      "id": 10
+    },
+    {
+      "author": "sss",
+      "description": "sss",
+      "title": "ssss",
+      "id": 11
+    },
+    {
+      "author": "",
+      "description": "",
+      "title": "",
+      "id": 12
+    },
+    {
+      "author": "tt",
+      "description": "tt",
+      "title": "tt",
+      "id": 13
+    },
+    {
+      "author": "",
+      "description": "",
+      "title": "",
+      "id": 14
+    },
+    {
+      "author": "hh",
+      "description": "hhh",
+      "title": "hhh",
+      "id": 15
+    }
+  ]
+}

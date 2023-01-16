@@ -1,48 +1,57 @@
-import Student from "./Student";
-
+import { useEffect, useState } from "react";
+import AddPost from "./AddPost";
+import Post from "./Post";
 
 function HomePage({user, students})
 {
-    console.log("From Homepage ", students)
+    const [posts, setPosts] = useState([])
 
+    useEffect(()=>{
+        fetch("http://localhost:4000/posts")
+        .then((r)=>r.json())
+        .then((posts)=>{
+             setPosts(posts)
+        })
+
+    },[])
+
+    function handleNewPost(newPost)
+    {
+      console.log("newpost Homepahge ",  newPost)
+      const updatedPost = [...posts, newPost]
+      setPosts(updatedPost)
+    }
+
+  console.log("DATA AFTER UPDATE", posts)
     return (
         <div className="container">
              <div className="row">
-                <div className="col ">
-                    <h6>{user.name}</h6>
-                    <h6>{user.role}</h6>
-                    <h6>{user.class}</h6>
+                <div className="col-md-8 ">
+                    Fetching Data
+                    <table className="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                             posts.map((singlePost)=>
+                                <Post key={singlePost.id}  post={singlePost}/>
+                             )
+                          
+                            }
+                        </tbody>
+                        </table>
+
                 </div>
-                <div className="col bg-light">
 
-                <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Class</th>
-                    <th scope="col">Role</th>
-                </tr>
-                </thead>
-                <tbody>
-                 
-                    {
-                        students.map((student)=> (
-                            <Student singleStudent={student} />
-                        )
-                        )
-                    }
-                               
-                </tbody>
-                </table>
-
-                    {/* {
-                        students.map((student)=> (
-                            <Student singleStudent={student} />
-                        )
-                        )
-                    } */}
-
-
+                <div className="col-md-4 bg-light">
+                  <AddPost handleNewPost={handleNewPost} />
 
                 </div>
                 
@@ -52,3 +61,4 @@ function HomePage({user, students})
 }
 
 export default HomePage;
+
