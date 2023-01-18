@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import Swal from 'sweetalert2'
 
 function AddPost({handleNewPost}) 
 {
@@ -30,7 +31,13 @@ function AddPost({handleNewPost})
         // utilize
         handleNewPost(newPost)
        
-        console.log("New Post ",newPost)
+        Swal.fire({
+          title: 'Success',
+          text: 'Saved successfully',
+          icon: 'success',
+          confirmButtonText: 'Exit',
+          confirmButtonColor:"green"
+        })
       })
     }
 

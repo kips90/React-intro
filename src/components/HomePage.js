@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import AddPost from "./AddPost";
 import Post from "./Post";
+import { Link } from "react-router-dom";
 
 function HomePage({user, students})
 {
@@ -17,7 +18,7 @@ function HomePage({user, students})
 
     function handleNewPost(newPost)
     {
-      console.log("newpost Homepahge ",  newPost)
+      console.log("newpost Homepage ",  newPost)
       const updatedPost = [...posts, newPost]
       setPosts(updatedPost)
     }
@@ -35,13 +36,16 @@ function HomePage({user, students})
                             <th scope="col">Title</th>
                             <th scope="col">Description</th>
                             <th scope="col">Author</th>
+                            <th scope="col">View Post</th>
+                            <th scope="col">Update</th>
                             <th scope="col">Delete</th>
                             </tr>
                         </thead>
                         <tbody>
                             {
                              posts.map((singlePost)=>
-                                <Post key={singlePost.id}  post={singlePost}/>
+                                 <Post key={singlePost.id}  post={singlePost}/>
+                               
                              )
                           
                             }
